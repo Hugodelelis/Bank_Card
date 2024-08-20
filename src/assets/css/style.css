@@ -1,0 +1,53 @@
+main {
+    max-width: 100%;
+}
+
+.left-content {
+    background-image: url('../imgs/bg-main-mobile.png');
+    min-height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-content {
+    background-color: white;
+    min-height: 70vh;
+}
+
+.card-image {
+    width: 15em;
+    height: 12em;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.back-card {
+    background-image: url('../imgs/bg-card-back.png');
+}
+
+.front-card {
+    background-image: url('../imgs/bg-card-front.png');
+}
+
+@media (min-width: 576px) { 
+    .card-image {
+        width: 25em;
+        height: 15em;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .left-content {
+        min-height: 100vh;
+    }
+
+    .right-content {
+        min-height: 100vh;
+    }
+}
