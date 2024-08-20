@@ -49,6 +49,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+}
+
+.form-content input::placeholder {
+    color: rgb(170, 163, 163);
 }
 
 .form-content button {
