@@ -1,53 +1,129 @@
-main {
-    max-width: 100%;
+body {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 400;
 }
 
-.left-content {
-    background-image: url('../imgs/bg-main-mobile.png');
-    min-height: 40vh;
-    background-repeat: no-repeat;
+.card-content {
+    background-image: url('../imgs/bg-main-mobile.png'); 
+    height: 12em;
     background-size: cover;
-    color: white;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.right-content {
-    background-color: white;
-    min-height: 70vh;
+.images {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .card-image {
-    width: 15em;
-    height: 12em;
-    background-repeat: no-repeat;
+    height: 15em;
+    position: relative;
     background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .back-card {
+    width: 15em;
     background-image: url('../imgs/bg-card-back.png');
+    margin-left: 2em;
 }
 
 .front-card {
+    width: 15em;
+    height: 8em;
     background-image: url('../imgs/bg-card-front.png');
+    margin-top: -9.5em;
+    margin-right: 2em;
 }
 
-@media (min-width: 576px) { 
-    .card-image {
-        width: 25em;
+.form-content {
+    padding-top: 12em;
+    height: 50svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content button {
+    margin: auto;
+    background-color: hsl(278, 94%, 30%);
+    border: none;
+}
+
+.form-content button:hover {
+    background-color: hsl(249, 99%, 64%) ;
+}
+
+
+@media (min-width: 576px) {
+    .card-content {
         height: 15em;
     }
-}
 
-
-@media (min-width: 992px) {
-    .left-content {
-        min-height: 100vh;
+    .card-image {
+        height: 20em;
+        width: 20em;
     }
 
-    .right-content {
-        min-height: 100vh;
+    .back-card {
+        margin-left: 5em;
+    }
+
+    .front-card {
+        margin-top: -13em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .card-content {
+        height: 100svh;
+        padding-right: 0 !important;
+    }
+
+    .images  {
+        flex-direction: column-reverse;
+    }
+
+    .card-image {
+        height: 15em;
+    }
+
+    .back-card {
+        width: 25em;
+        margin: 0 0 0 20em;
+    }
+
+    .front-card {
+        width: 25em;
+        margin: 0 0 0 15em;
+    }
+
+    .form-content {
+        height: 100vh;
+        padding-left: 15em;
+        padding-top: 0;
+    } 
+}
+
+@media (min-width: 1400px) {
+    .card-image {
+        height: 19em;
+    }
+
+    .back-card {
+        width: 30em;
+        margin: 0 0 0 25em;
+    }
+
+    .front-card {
+        width: 30em;
+        margin: 0 0 0 20em;
     }
 }
