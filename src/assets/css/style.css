@@ -129,6 +129,8 @@ body {
 
 @media (min-width: 1200px) {
     .card-content {
+        background: url('../imgs/bg-main-desktop.png');
+        background-size: cover;
         height: 100svh;
         padding-right: 0 !important;
     }
