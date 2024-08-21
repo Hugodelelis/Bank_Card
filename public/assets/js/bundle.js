@@ -7564,6 +7564,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     width: 15em;
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
     margin-left: 2em;
+    position: relative;
+}
+
+.back-card span {
+    padding-left: 11em;
+    padding-top: 3.4em;
+    position: absolute;
 }
 
 .front-card {
@@ -7572,6 +7579,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
     margin-top: -9.5em;
     margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+}
+
+.front-card img {
+    width: 3em;
+}
+
+.front-card span {
+    text-align: center;
+}
+
+.front-card .info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-content {
@@ -7587,10 +7611,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     color: rgb(170, 163, 163);
 }
 
+.form-content .form-control:focus {
+    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+    box-shadow: none;
+}
+
 .form-content button {
     margin: auto;
     background-color: hsl(278, 94%, 30%);
     border: none;
+    transition: all 0.6s ease-in-out;
 }
 
 .form-content button:hover {
@@ -7612,8 +7642,19 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
         margin-left: 5em;
     }
 
+    .back-card span {
+        padding-left: 15.8em;
+        padding-top: 4.6em;
+    }
+
     .front-card {
+        width: 20em;
         margin-top: -13em;
+        gap: 2.5em;
+    }
+
+    .front-card span {
+        font-size: 1.15em;
     }
 }
 
@@ -7628,28 +7669,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     }
 
     .card-image {
-        height: 15em;
-    }
-
-    .back-card {
-        width: 25em;
-        margin: 0 0 0 20em;
-    }
-
-    .front-card {
-        width: 25em;
-        margin: 0 0 0 15em;
-    }
-
-    .form-content {
-        height: 100vh;
-        padding-left: 15em;
-        padding-top: 0;
-    } 
-}
-
-@media (min-width: 1400px) {
-    .card-image {
         height: 19em;
     }
 
@@ -7658,11 +7677,28 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
         margin: 0 0 0 25em;
     }
 
+    .back-card span {
+        padding-left: 24.5em;
+        padding-top: 7.3em;
+    }
+
     .front-card {
         width: 30em;
         margin: 0 0 0 20em;
+        gap: 4.5em;
     }
-}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,wCAAwC;IACxC,gBAAgB;AACpB;;AAEA;IACI,yDAAmD;IACnD,YAAY;IACZ,sBAAsB;IACtB,4BAA4B;IAC5B,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;;AAEvB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,wBAAwB;IACxB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,yDAAiD;IACjD,gBAAgB;AACpB;;AAEA;IACI,WAAW;IACX,WAAW;IACX,yDAAkD;IAClD,kBAAkB;IAClB,iBAAiB;AACrB;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,YAAY;IACZ,oCAAoC;IACpC,YAAY;AAChB;;AAEA;IACI,qCAAqC;AACzC;;;AAGA;IACI;QACI,YAAY;IAChB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,iBAAiB;IACrB;AACJ;;AAEA;IACI;QACI,cAAc;QACd,2BAA2B;IAC/B;;IAEA;QACI,8BAA8B;IAClC;;IAEA;QACI,YAAY;IAChB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,aAAa;QACb,kBAAkB;QAClB,cAAc;IAClB;AACJ;;AAEA;IACI;QACI,YAAY;IAChB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;AACJ","sourcesContent":["body {\r\n    font-family: \"Space Grotesk\", sans-serif;\r\n    font-weight: 400;\r\n}\r\n\r\n.card-content {\r\n    background-image: url('../imgs/bg-main-mobile.png'); \r\n    height: 12em;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.images {\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n}\r\n\r\n.card-image {\r\n    height: 15em;\r\n    position: relative;\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.back-card {\r\n    width: 15em;\r\n    background-image: url('../imgs/bg-card-back.png');\r\n    margin-left: 2em;\r\n}\r\n\r\n.front-card {\r\n    width: 15em;\r\n    height: 8em;\r\n    background-image: url('../imgs/bg-card-front.png');\r\n    margin-top: -9.5em;\r\n    margin-right: 2em;\r\n}\r\n\r\n.form-content {\r\n    padding-top: 12em;\r\n    height: 50svh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n}\r\n\r\n.form-content input::placeholder {\r\n    color: rgb(170, 163, 163);\r\n}\r\n\r\n.form-content button {\r\n    margin: auto;\r\n    background-color: hsl(278, 94%, 30%);\r\n    border: none;\r\n}\r\n\r\n.form-content button:hover {\r\n    background-color: hsl(249, 99%, 64%) ;\r\n}\r\n\r\n\r\n@media (min-width: 576px) {\r\n    .card-content {\r\n        height: 15em;\r\n    }\r\n\r\n    .card-image {\r\n        height: 20em;\r\n        width: 20em;\r\n    }\r\n\r\n    .back-card {\r\n        margin-left: 5em;\r\n    }\r\n\r\n    .front-card {\r\n        margin-top: -13em;\r\n    }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n    .card-content {\r\n        height: 100svh;\r\n        padding-right: 0 !important;\r\n    }\r\n\r\n    .images  {\r\n        flex-direction: column-reverse;\r\n    }\r\n\r\n    .card-image {\r\n        height: 15em;\r\n    }\r\n\r\n    .back-card {\r\n        width: 25em;\r\n        margin: 0 0 0 20em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 25em;\r\n        margin: 0 0 0 15em;\r\n    }\r\n\r\n    .form-content {\r\n        height: 100vh;\r\n        padding-left: 15em;\r\n        padding-top: 0;\r\n    } \r\n}\r\n\r\n@media (min-width: 1400px) {\r\n    .card-image {\r\n        height: 19em;\r\n    }\r\n\r\n    .back-card {\r\n        width: 30em;\r\n        margin: 0 0 0 25em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 30em;\r\n        margin: 0 0 0 20em;\r\n    }\r\n}"],"sourceRoot":""}]);
+
+    .front-card span {
+        font-size: 1.6em;
+    }
+
+    .form-content {
+        height: 100vh;
+        padding-left: 15em;
+        padding-top: 0;
+    } 
+}
+`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,wCAAwC;IACxC,gBAAgB;AACpB;;AAEA;IACI,yDAAmD;IACnD,YAAY;IACZ,sBAAsB;IACtB,4BAA4B;IAC5B,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;;AAEvB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,wBAAwB;IACxB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,yDAAiD;IACjD,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,WAAW;IACX,yDAAkD;IAClD,kBAAkB;IAClB,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,iBAAiB;IACjB,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;IACnB,uBAAuB;AAC3B;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,uEAAuE;IACvE,gBAAgB;AACpB;;AAEA;IACI,YAAY;IACZ,oCAAoC;IACpC,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,qCAAqC;AACzC;;;AAGA;IACI;QACI,YAAY;IAChB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,iBAAiB;QACjB,UAAU;IACd;;IAEA;QACI,iBAAiB;IACrB;AACJ;;AAEA;IACI;QACI,cAAc;QACd,2BAA2B;IAC/B;;IAEA;QACI,8BAA8B;IAClC;;IAEA;QACI,YAAY;IAChB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,kBAAkB;QAClB,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,aAAa;QACb,kBAAkB;QAClB,cAAc;IAClB;AACJ","sourcesContent":["body {\r\n    font-family: \"Space Grotesk\", sans-serif;\r\n    font-weight: 400;\r\n}\r\n\r\n.card-content {\r\n    background-image: url('../imgs/bg-main-mobile.png'); \r\n    height: 12em;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.images {\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n\r\n}\r\n\r\n.card-image {\r\n    height: 15em;\r\n    position: relative;\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.back-card {\r\n    width: 15em;\r\n    background-image: url('../imgs/bg-card-back.png');\r\n    margin-left: 2em;\r\n    position: relative;\r\n}\r\n\r\n.back-card span {\r\n    padding-left: 11em;\r\n    padding-top: 3.4em;\r\n    position: absolute;\r\n}\r\n\r\n.front-card {\r\n    width: 15em;\r\n    height: 8em;\r\n    background-image: url('../imgs/bg-card-front.png');\r\n    margin-top: -9.5em;\r\n    margin-right: 2em;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1em;\r\n    color: white;\r\n}\r\n\r\n.front-card img {\r\n    width: 3em;\r\n}\r\n\r\n.front-card span {\r\n    text-align: center;\r\n}\r\n\r\n.front-card .info {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.form-content {\r\n    padding-top: 12em;\r\n    height: 50svh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    background-color: white;\r\n}\r\n\r\n.form-content input::placeholder {\r\n    color: rgb(170, 163, 163);\r\n}\r\n\r\n.form-content .form-control:focus {\r\n    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;\r\n    box-shadow: none;\r\n}\r\n\r\n.form-content button {\r\n    margin: auto;\r\n    background-color: hsl(278, 94%, 30%);\r\n    border: none;\r\n    transition: all 0.6s ease-in-out;\r\n}\r\n\r\n.form-content button:hover {\r\n    background-color: hsl(249, 99%, 64%) ;\r\n}\r\n\r\n\r\n@media (min-width: 576px) {\r\n    .card-content {\r\n        height: 15em;\r\n    }\r\n\r\n    .card-image {\r\n        height: 20em;\r\n        width: 20em;\r\n    }\r\n\r\n    .back-card {\r\n        margin-left: 5em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 15.8em;\r\n        padding-top: 4.6em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 20em;\r\n        margin-top: -13em;\r\n        gap: 2.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.15em;\r\n    }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n    .card-content {\r\n        height: 100svh;\r\n        padding-right: 0 !important;\r\n    }\r\n\r\n    .images  {\r\n        flex-direction: column-reverse;\r\n    }\r\n\r\n    .card-image {\r\n        height: 19em;\r\n    }\r\n\r\n    .back-card {\r\n        width: 30em;\r\n        margin: 0 0 0 25em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 24.5em;\r\n        padding-top: 7.3em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 30em;\r\n        margin: 0 0 0 20em;\r\n        gap: 4.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.6em;\r\n    }\r\n\r\n    .form-content {\r\n        height: 100vh;\r\n        padding-left: 15em;\r\n        padding-top: 0;\r\n    } \r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

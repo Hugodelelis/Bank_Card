@@ -33,6 +33,13 @@ body {
     width: 15em;
     background-image: url('../imgs/bg-card-back.png');
     margin-left: 2em;
+    position: relative;
+}
+
+.back-card span {
+    padding-left: 11em;
+    padding-top: 3.4em;
+    position: absolute;
 }
 
 .front-card {
@@ -41,6 +48,23 @@ body {
     background-image: url('../imgs/bg-card-front.png');
     margin-top: -9.5em;
     margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    color: white;
+}
+
+.front-card img {
+    width: 3em;
+}
+
+.front-card span {
+    text-align: center;
+}
+
+.front-card .info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-content {
@@ -56,10 +80,16 @@ body {
     color: rgb(170, 163, 163);
 }
 
+.form-content .form-control:focus {
+    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
+    box-shadow: none;
+}
+
 .form-content button {
     margin: auto;
     background-color: hsl(278, 94%, 30%);
     border: none;
+    transition: all 0.6s ease-in-out;
 }
 
 .form-content button:hover {
@@ -81,8 +111,19 @@ body {
         margin-left: 5em;
     }
 
+    .back-card span {
+        padding-left: 15.8em;
+        padding-top: 4.6em;
+    }
+
     .front-card {
+        width: 20em;
         margin-top: -13em;
+        gap: 2.5em;
+    }
+
+    .front-card span {
+        font-size: 1.15em;
     }
 }
 
@@ -97,28 +138,6 @@ body {
     }
 
     .card-image {
-        height: 15em;
-    }
-
-    .back-card {
-        width: 25em;
-        margin: 0 0 0 20em;
-    }
-
-    .front-card {
-        width: 25em;
-        margin: 0 0 0 15em;
-    }
-
-    .form-content {
-        height: 100vh;
-        padding-left: 15em;
-        padding-top: 0;
-    } 
-}
-
-@media (min-width: 1400px) {
-    .card-image {
         height: 19em;
     }
 
@@ -127,8 +146,24 @@ body {
         margin: 0 0 0 25em;
     }
 
+    .back-card span {
+        padding-left: 24.5em;
+        padding-top: 7.3em;
+    }
+
     .front-card {
         width: 30em;
         margin: 0 0 0 20em;
+        gap: 4.5em;
     }
+
+    .front-card span {
+        font-size: 1.6em;
+    }
+
+    .form-content {
+        height: 100vh;
+        padding-left: 15em;
+        padding-top: 0;
+    } 
 }
