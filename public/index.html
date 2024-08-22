@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-    <script src="assets/js/bundle.js"></script>
+    <script src="assets/js/bundle.js" defer></script>
     <title>Bank card</title>
 </head>
 <body>
@@ -15,39 +15,39 @@
         <div class="card-content col-12 col-lg-12 col-xl-3 p-4">
             <div class="container images">
                 <div class="card-image back-card">
-                    <span>000</span>
+                    <span id="cvcInfo">000</span>
                 </div>
                 <div class="card-image front-card p-2">
                     <img src="assets/imgs/card-logo.svg" alt="logo card">
-                    <span>0000 0000 0000 0000</span>
-                    <div class="info">
-                        <span>JANE APPLESEED</span>
-                        <span>00/00</span>
+                    <span id="numberInfo">0000 0000 0000 0000</span>
+                    <div class="info px-2">
+                        <span id="nameInfo">JANE APPLESEED</span>
+                        <span id="dateInfo">00/00</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-content col-12 col-lg-12 col-xl-9">
-            <form action="#" class="col-11 col-lg-8 col-xl-6 row">
-                <div class="form-group col-12 mb-4">
-                    <label for="" class="form-label">CARDHOLDER NAME</label>
-                    <input type="text" class="form-control" placeholder="e.g. Jane Appleseed">
+            <form action="#" class="col-11 col-lg-8 col-xl-6 row" id="form">
+                <div class="form-group col-12 mb-3">
+                    <label for="name" class="form-label">CARDHOLDER NAME</label>
+                    <input type="text" class="form-control" placeholder="e.g. Jane Appleseed" id="name" name="name">
                 </div>
 
                 <div class="form-group col-12 mb-4">
-                    <label for="" class="form-label">CARDNUMBER</label>
-                    <input type="text" class="form-control" placeholder="e.g. 1234 5678 9123 0000">
+                    <label for="number" class="form-label">CARDNUMBER</label>
+                    <input type="text" class="form-control" placeholder="e.g. 1234 5678 9123 0000" id="number" name="number">
                 </div>
 
                 <div class="form-group col-7 mb-4">
-                    <label for="" class="form-label">EXP. DATE (MM/YY)</label>
-                    <input type="text" class="form-control col-6" placeholder="e.g. MM/YY">
+                    <label for="date" class="form-label">EXP. DATE (MM/YY)</label>
+                    <input type="text" class="form-control col-6" placeholder="e.g. MM/YY" id="date" name="date">
                 </div>
 
                 <div class="form-group col-5 mb-4">
-                    <label for="" class="form-label">CVC</label>
-                    <input type="text" class="form-control" placeholder="e.g. 123">
+                    <label for="cvc" class="form-label">CVC</label>
+                    <input type="text" class="form-control" placeholder="e.g. 123" maxlength="3" id="cvc" name="cvc">
                 </div>
                 <button class="col-8 btn btn-primary">CONFIRM</button>
             </form>
