@@ -96,8 +96,42 @@ export default class Validation {
 
     isDateValid() {
         let valid = true
+        
+        const months = [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+        ]
 
-        if(this.dateField.value.slice(3,5) > 12 || this.dateField.value.slice(3,5) <= 0  && this.dateField.value.slice(0,2) > 31 || this.dateField.value.slice(0,2) <= 0) {
+        let countDays = 30
+
+        if (
+            months[this.dateField.value.slice(3,5) - 1] === 'Janeiro' ||
+            months[this.dateField.value.slice(3,5) - 1 ] === 'Março' ||
+            months[this.dateField.value.slice(3,5) - 1] === 'Maio' ||
+            months[this.dateField.value.slice(3,5) - 1] === 'Julho' ||
+            months[this.dateField.value.slice(3,5) - 1] === 'Agosto' ||
+            months[this.dateField.value.slice(3,5) - 1] === 'Outubro' ||
+            months[this.dateField.value.slice(3,5) - 1] === 'Dezembro'
+        ) countDays = 31
+
+        if (months[this.dateField.value.slice(3,5) - 1] === 'Fevereiro') countDays = 29
+
+        if(this.dateField.value.slice(0,2) > countDays || this.dateField.value.slice(0,2) <= 0) {
+            this.setError(this.dateField, 'Data inválida')
+            valid = false
+        }
+        
+        if(this.dateField.value.slice(3,5) > 12 || this.dateField.value.slice(3,5) <= 0 ) {
             this.setError(this.dateField, 'Data inválida')
             valid = false
         }
@@ -150,4 +184,3 @@ export default class Validation {
         campo.insertAdjacentElement('afterend', div);
     }
 }
-
