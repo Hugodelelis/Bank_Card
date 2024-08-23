@@ -1,5 +1,3 @@
-import { set } from "core-js/core/dict";
-
 export default class Validation {
     constructor() {
         this.form = document.querySelector('#form');
@@ -17,13 +15,13 @@ export default class Validation {
         });
 
         // Adiciona evento de input aos campos para validação em tempo real
-        this.dateField.addEventListener('input', () => {
-            this.isDateValid()
-        })
-
         this.nameField.addEventListener('input', () => {
             this.isNameValid();
         });
+
+        this.dateField.addEventListener('input', () => {
+            this.isDateValid()
+        })
 
         this.numberField.addEventListener('input', () => {
             this.isNumberValid()
@@ -50,9 +48,10 @@ export default class Validation {
     }
 
     isNameValid() {
+        const cleanName = this.nameField.value.replace(/\s/g, '')
         let valid = true;
 
-        if (this.nameField.value.length <= 3) {
+        if (cleanName.length <= 3) {
             this.setError(this.nameField, 'O nome deve conter no mínimo 4 caracteres.');
             valid = false;
         }
@@ -68,7 +67,7 @@ export default class Validation {
                 errorElement.remove();
             }
         }
-
+        
         return valid;
     }
 
@@ -97,6 +96,11 @@ export default class Validation {
 
     isDateValid() {
         let valid = true
+
+        if(this.dateField.value.slice(3,5) > 12 || this.dateField.value.slice(3,5) <= 0  && this.dateField.value.slice(0,2) > 31 || this.dateField.value.slice(0,2) <= 0) {
+            this.setError(this.dateField, 'Data inválida')
+            valid = false
+        }
 
         if(!this.dateField.value) {
             this.setError(this.dateField, 'Preencha o campo')
