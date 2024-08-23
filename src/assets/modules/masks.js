@@ -4,7 +4,7 @@ export default class Masks {
         this.numberField.addEventListener('input', this.applyMask.bind(this));
 
         this.dateField = document.querySelector('#date')
-        this.dateField.addEventListener('input',this.applyMask.bind(this))
+        this.dateField.addEventListener('input', this.applyMask.bind(this))
 
         this.cvcField = document.querySelector('#cvc')
         this.cvcField.addEventListener('input', this.applyMask.bind(this))

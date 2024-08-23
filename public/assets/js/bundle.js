@@ -2955,6 +2955,74 @@ function withinMaxClamp(min, value, max) {
 
 /***/ }),
 
+/***/ "./src/assets/modules/cardInfo.js":
+/*!****************************************!*\
+  !*** ./src/assets/modules/cardInfo.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Infos)
+/* harmony export */ });
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+var Infos = /*#__PURE__*/function () {
+  function Infos() {
+    _classCallCheck(this, Infos);
+    this.nameField = document.querySelector('#name');
+    this.nameInfo = document.querySelector('#nameInfo');
+    this.numberField = document.querySelector('#number');
+    this.numberInfo = document.querySelector('#numberInfo');
+    this.dateField = document.querySelector('#date');
+    this.dateInfo = document.querySelector('#dateInfo');
+    this.cvcField = document.querySelector('#cvc');
+    this.cvcInfo = document.querySelector('#cvcInfo');
+    this.applyCard();
+  }
+  return _createClass(Infos, [{
+    key: "applyCard",
+    value: function applyCard() {
+      var _this = this;
+      this.nameField.addEventListener('input', function () {
+        if (_this.nameField.value == '') {
+          _this.nameInfo.innerHTML = 'JANE APPLESEED';
+        } else {
+          _this.nameInfo.innerHTML = _this.nameField.value;
+        }
+      });
+      this.numberField.addEventListener('input', function () {
+        if (_this.numberField.value == '') {
+          _this.numberInfo.innerHTML = '0000 0000 0000 0000';
+        } else {
+          _this.numberInfo.innerHTML = _this.numberField.value;
+        }
+      });
+      this.dateField.addEventListener('input', function () {
+        if (_this.dateField.value == '') {
+          _this.dateInfo.innerHTML = '00/00';
+        } else {
+          _this.dateInfo.innerHTML = _this.dateField.value;
+        }
+      });
+      this.cvcField.addEventListener('input', function () {
+        if (_this.cvcField.value == '') {
+          _this.cvcInfo.innerHTML = '000';
+        } else {
+          _this.cvcInfo.innerHTML = _this.cvcField.value;
+        }
+      });
+    }
+  }]);
+}();
+
+
+/***/ }),
+
 /***/ "./src/assets/modules/masks.js":
 /*!*************************************!*\
   !*** ./src/assets/modules/masks.js ***!
@@ -8867,6 +8935,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 /* harmony import */ var _assets_modules_masks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/modules/masks */ "./src/assets/modules/masks.js");
 /* harmony import */ var _assets_modules_validation__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/modules/validation */ "./src/assets/modules/validation.js");
+/* harmony import */ var _assets_modules_cardInfo__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/modules/cardInfo */ "./src/assets/modules/cardInfo.js");
+
 
 
 
@@ -8874,6 +8944,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var validate = new _assets_modules_validation__WEBPACK_IMPORTED_MODULE_4__["default"]();
 var masks = new _assets_modules_masks__WEBPACK_IMPORTED_MODULE_3__["default"]();
+var infos = new _assets_modules_cardInfo__WEBPACK_IMPORTED_MODULE_5__["default"]();
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
