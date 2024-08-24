@@ -1,5 +1,3 @@
-import { isInteger } from "core-js/core/number";
-
 export default class Validation {
     constructor() {
         this.form = document.querySelector('#form');
