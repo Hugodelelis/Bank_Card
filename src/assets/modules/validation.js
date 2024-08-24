@@ -1,3 +1,5 @@
+import { isInteger } from "core-js/core/number";
+
 export default class Validation {
     constructor() {
         this.form = document.querySelector('#form');
@@ -95,46 +97,24 @@ export default class Validation {
     }
 
     isDateValid() {
+        const date = new Date()
+        let year = date.getFullYear().toString().slice(2,4)
         let valid = true
-        
-        const months = [
-            "Janeiro",
-            "Fevereiro",
-            "Março",
-            "Abril",
-            "Maio",
-            "Junho",
-            "Julho",
-            "Agosto",
-            "Setembro",
-            "Outubro",
-            "Novembro",
-            "Dezembro"
-        ]
 
-        let countDays = 30
+        if(this.dateField.value.slice(0,2) <= date.getMonth() + 1) {
+            this.setError(this.dateField, 'Cartão vencido')
+            valid = false
+        }
 
-        if (
-            months[this.dateField.value.slice(3,5) - 1] === 'Janeiro' ||
-            months[this.dateField.value.slice(3,5) - 1 ] === 'Março' ||
-            months[this.dateField.value.slice(3,5) - 1] === 'Maio' ||
-            months[this.dateField.value.slice(3,5) - 1] === 'Julho' ||
-            months[this.dateField.value.slice(3,5) - 1] === 'Agosto' ||
-            months[this.dateField.value.slice(3,5) - 1] === 'Outubro' ||
-            months[this.dateField.value.slice(3,5) - 1] === 'Dezembro'
-        ) countDays = 31
-
-        if (months[this.dateField.value.slice(3,5) - 1] === 'Fevereiro') countDays = 29
-
-        if(this.dateField.value.slice(0,2) > countDays || this.dateField.value.slice(0,2) <= 0) {
+        if(this.dateField.value.slice(0,2) > 12 || this.dateField.value.slice(0,2) <= 0) {
             this.setError(this.dateField, 'Data inválida')
             valid = false
         }
         
-        if(this.dateField.value.slice(3,5) > 12 || this.dateField.value.slice(3,5) <= 0 ) {
+        if(this.dateField.value.slice(3,5) > Number(year) + 10 || this.dateField.value.slice(3,5) < year) {
             this.setError(this.dateField, 'Data inválida')
             valid = false
-        }
+        } 
 
         if(!this.dateField.value) {
             this.setError(this.dateField, 'Preencha o campo')
