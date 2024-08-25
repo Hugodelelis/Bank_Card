@@ -99,7 +99,8 @@ export default class Validation {
         let year = date.getFullYear().toString().slice(2,4)
         let valid = true
 
-        if(this.dateField.value.slice(0,2) <= date.getMonth() + 1) {
+        if(this.dateField.value.slice(0,2) < (date.getMonth() + 1) && this.dateField.value.slice(3,5) == date.getFullYear().toString().slice(2,4)
+        || this.dateField.value.slice(3,5) < date.getFullYear().toString().slice(2,4)) {
             this.setError(this.dateField, 'Cartão vencido')
             valid = false
         }
@@ -109,7 +110,7 @@ export default class Validation {
             valid = false
         }
         
-        if(this.dateField.value.slice(3,5) > Number(year) + 10 || this.dateField.value.slice(3,5) < year) {
+        if(this.dateField.value.slice(3,5) > Number(year) + 10) {
             this.setError(this.dateField, 'Data inválida')
             valid = false
         } 
@@ -139,7 +140,6 @@ export default class Validation {
         
         if (valid) {
             const errorElement = this.cvcField.nextElementSibling;
-            // checa se possui o elemento para não dar null
             if (errorElement && errorElement.classList.contains('error-text')) {
                 errorElement.remove();
             }
