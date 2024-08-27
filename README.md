@@ -1,5 +1,3 @@
-# Bank card
-
 ![Status Badge](https://img.shields.io/badge/status-active-brightgreen)
 ![Version Badge](https://img.shields.io/badge/version-1.0.0-blue)
 
