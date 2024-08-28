@@ -7912,7 +7912,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 
 .card-content {
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_0___}); 
-    height: 12em;
+    height: 20svh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -7953,7 +7953,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     height: 8em;
     background-image: url(${___CSS_LOADER_URL_REPLACEMENT_2___});
     margin-top: -9.5em;
-    margin-right: 2em;
+    margin-right: 2em;   
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -7974,7 +7974,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 }
 
 .form-content {
-    height: 100svh;
+    height: 80svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7983,6 +7983,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
 .form-content input::placeholder {
     color: rgb(170, 163, 163);
 }
+
 
 .form-content .form-control:focus {
     border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;
@@ -8041,6 +8042,50 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
     }
 }
 
+@media (min-width: 768px) {
+    .card-content {
+        height: 15em;
+        margin-bottom: 0;
+    }
+
+    .card-image {
+        height: 20em;
+        width: 20em;
+    }
+
+    .back-card {
+        margin-left: 5em;
+    }
+
+    .back-card span {
+        padding-left: 15.8em;
+        padding-top: 4.6em;
+    }
+
+    .front-card {
+        width: 20em;
+        margin-top: -13em;
+        gap: 2.5em;
+    }
+
+    .form-content {
+        margin: 0;
+    }
+
+    .front-card span {
+        font-size: 1.15em;
+    }
+
+    .form-content {
+        height: 75vh;
+    }
+
+    .error-text {
+        color: red;
+        font-size: 1.2em;
+    }
+} 
+
 @media (min-width: 1200px) {
     .card-content {
         background: url(${___CSS_LOADER_URL_REPLACEMENT_3___});
@@ -8087,7 +8132,13 @@ ___CSS_LOADER_EXPORT___.push([module.id, `body {
         padding-top: 0;
     } 
 }
-`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,wCAAwC;IACxC,gBAAgB;AACpB;;AAEA;IACI,yDAAmD;IACnD,YAAY;IACZ,sBAAsB;IACtB,4BAA4B;IAC5B,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,wBAAwB;IACxB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,yDAAiD;IACjD,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,WAAW;IACX,yDAAkD;IAClD,kBAAkB;IAClB,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,cAAc;IACd,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;AAC7B;;AAEA;IACI,uEAAuE;IACvE,gBAAgB;AACpB;;AAEA;IACI,YAAY;IACZ,oCAAoC;IACpC,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,qCAAqC;AACzC;;AAEA;IACI,UAAU;IACV,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI;QACI,YAAY;IAChB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,iBAAiB;QACjB,UAAU;IACd;;IAEA;QACI,iBAAiB;IACrB;;IAEA;QACI,UAAU;QACV,gBAAgB;IACpB;AACJ;;AAEA;IACI;QACI,mDAA8C;QAC9C,sBAAsB;QACtB,cAAc;QACd,2BAA2B;IAC/B;;IAEA;QACI,8BAA8B;IAClC;;IAEA;QACI,YAAY;IAChB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,kBAAkB;QAClB,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI;IACJ;;IAEA;QACI,aAAa;QACb,kBAAkB;QAClB,cAAc;IAClB;AACJ","sourcesContent":["body {\r\n    font-family: \"Space Grotesk\", sans-serif;\r\n    font-weight: 400;\r\n}\r\n\r\n.card-content {\r\n    background-image: url('../imgs/bg-main-mobile.png'); \r\n    height: 12em;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.images {\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.card-image {\r\n    height: 15em;\r\n    position: relative;\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.back-card {\r\n    width: 15em;\r\n    background-image: url('../imgs/bg-card-back.png');\r\n    margin-left: 2em;\r\n    position: relative;\r\n}\r\n\r\n.back-card span {\r\n    padding-left: 11em;\r\n    padding-top: 3.4em;\r\n    position: absolute;\r\n}\r\n\r\n.front-card {\r\n    width: 15em;\r\n    height: 8em;\r\n    background-image: url('../imgs/bg-card-front.png');\r\n    margin-top: -9.5em;\r\n    margin-right: 2em;\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1em;\r\n    color: white;\r\n}\r\n\r\n.front-card img {\r\n    width: 3em;\r\n}\r\n\r\n.front-card span {\r\n    text-align: center;\r\n}\r\n\r\n.front-card .info {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.form-content {\r\n    height: 100svh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.form-content input::placeholder {\r\n    color: rgb(170, 163, 163);\r\n}\r\n\r\n.form-content .form-control:focus {\r\n    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;\r\n    box-shadow: none;\r\n}\r\n\r\n.form-content button {\r\n    margin: auto;\r\n    background-color: hsl(278, 94%, 30%);\r\n    border: none;\r\n    transition: all 0.6s ease-in-out;\r\n}\r\n\r\n.form-content button:hover {\r\n    background-color: hsl(249, 99%, 64%) ;\r\n}\r\n\r\n.error-text {\r\n    color: red;\r\n    font-size: 0.8em;\r\n    padding-left: 0.2em;\r\n}\r\n\r\n@media (min-width: 576px) {\r\n    .card-content {\r\n        height: 15em;\r\n    }\r\n\r\n    .card-image {\r\n        height: 20em;\r\n        width: 20em;\r\n    }\r\n\r\n    .back-card {\r\n        margin-left: 5em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 15.8em;\r\n        padding-top: 4.6em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 20em;\r\n        margin-top: -13em;\r\n        gap: 2.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.15em;\r\n    }\r\n\r\n    .error-text {\r\n        color: red;\r\n        font-size: 1.2em;\r\n    }\r\n}\r\n\r\n@media (min-width: 1200px) {\r\n    .card-content {\r\n        background: url('../imgs/bg-main-desktop.png');\r\n        background-size: cover;\r\n        height: 100svh;\r\n        padding-right: 0 !important;\r\n    }\r\n\r\n    .images  {\r\n        flex-direction: column-reverse;\r\n    }\r\n\r\n    .card-image {\r\n        height: 19em;\r\n    }\r\n\r\n    .back-card {\r\n        width: 30em;\r\n        margin: 0 0 0 25em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 24.5em;\r\n        padding-top: 7.3em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 30em;\r\n        margin: 0 0 0 20em;\r\n        gap: 4.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.6em;\r\n    }\r\n\r\n    .front-card .info {\r\n        font-size: 0.8em\r\n    }\r\n\r\n    .form-content {\r\n        height: 100vh;\r\n        padding-left: 15em;\r\n        padding-top: 0;\r\n    } \r\n}\r\n"],"sourceRoot":""}]);
+
+@media only screen and (orientation: landscape) and (max-height: 420px) {
+
+    .form-content {
+        height: 45em;
+    }
+}`, "",{"version":3,"sources":["webpack://./src/assets/css/style.css"],"names":[],"mappings":"AAAA;IACI,wCAAwC;IACxC,gBAAgB;AACpB;;AAEA;IACI,yDAAmD;IACnD,aAAa;IACb,sBAAsB;IACtB,4BAA4B;IAC5B,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,aAAa;IACb,sBAAsB;IACtB,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,YAAY;IACZ,kBAAkB;IAClB,wBAAwB;IACxB,4BAA4B;AAChC;;AAEA;IACI,WAAW;IACX,yDAAiD;IACjD,gBAAgB;IAChB,kBAAkB;AACtB;;AAEA;IACI,kBAAkB;IAClB,kBAAkB;IAClB,kBAAkB;AACtB;;AAEA;IACI,WAAW;IACX,WAAW;IACX,yDAAkD;IAClD,kBAAkB;IAClB,iBAAiB;IACjB,aAAa;IACb,sBAAsB;IACtB,QAAQ;IACR,YAAY;AAChB;;AAEA;IACI,UAAU;AACd;;AAEA;IACI,kBAAkB;AACtB;;AAEA;IACI,aAAa;IACb,8BAA8B;AAClC;;AAEA;IACI,aAAa;IACb,aAAa;IACb,uBAAuB;IACvB,mBAAmB;AACvB;;AAEA;IACI,yBAAyB;AAC7B;;;AAGA;IACI,uEAAuE;IACvE,gBAAgB;AACpB;;AAEA;IACI,YAAY;IACZ,oCAAoC;IACpC,YAAY;IACZ,gCAAgC;AACpC;;AAEA;IACI,qCAAqC;AACzC;;AAEA;IACI,UAAU;IACV,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI;QACI,YAAY;IAChB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,iBAAiB;QACjB,UAAU;IACd;;IAEA;QACI,iBAAiB;IACrB;;IAEA;QACI,UAAU;QACV,gBAAgB;IACpB;AACJ;;AAEA;IACI;QACI,YAAY;QACZ,gBAAgB;IACpB;;IAEA;QACI,YAAY;QACZ,WAAW;IACf;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,iBAAiB;QACjB,UAAU;IACd;;IAEA;QACI,SAAS;IACb;;IAEA;QACI,iBAAiB;IACrB;;IAEA;QACI,YAAY;IAChB;;IAEA;QACI,UAAU;QACV,gBAAgB;IACpB;AACJ;;AAEA;IACI;QACI,mDAA8C;QAC9C,sBAAsB;QACtB,cAAc;QACd,2BAA2B;IAC/B;;IAEA;QACI,8BAA8B;IAClC;;IAEA;QACI,YAAY;IAChB;;IAEA;QACI,WAAW;QACX,kBAAkB;IACtB;;IAEA;QACI,oBAAoB;QACpB,kBAAkB;IACtB;;IAEA;QACI,WAAW;QACX,kBAAkB;QAClB,UAAU;IACd;;IAEA;QACI,gBAAgB;IACpB;;IAEA;QACI;IACJ;;IAEA;QACI,aAAa;QACb,kBAAkB;QAClB,cAAc;IAClB;AACJ;;AAEA;;IAEI;QACI,YAAY;IAChB;AACJ","sourcesContent":["body {\r\n    font-family: \"Space Grotesk\", sans-serif;\r\n    font-weight: 400;\r\n}\r\n\r\n.card-content {\r\n    background-image: url('../imgs/bg-main-mobile.png'); \r\n    height: 20svh;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.images {\r\n    margin: auto;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.card-image {\r\n    height: 15em;\r\n    position: relative;\r\n    background-size: contain;\r\n    background-repeat: no-repeat;\r\n}\r\n\r\n.back-card {\r\n    width: 15em;\r\n    background-image: url('../imgs/bg-card-back.png');\r\n    margin-left: 2em;\r\n    position: relative;\r\n}\r\n\r\n.back-card span {\r\n    padding-left: 11em;\r\n    padding-top: 3.4em;\r\n    position: absolute;\r\n}\r\n\r\n.front-card {\r\n    width: 15em;\r\n    height: 8em;\r\n    background-image: url('../imgs/bg-card-front.png');\r\n    margin-top: -9.5em;\r\n    margin-right: 2em;   \r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 1em;\r\n    color: white;\r\n}\r\n\r\n.front-card img {\r\n    width: 3em;\r\n}\r\n\r\n.front-card span {\r\n    text-align: center;\r\n}\r\n\r\n.front-card .info {\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.form-content {\r\n    height: 80svh;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.form-content input::placeholder {\r\n    color: rgb(170, 163, 163);\r\n}\r\n\r\n\r\n.form-content .form-control:focus {\r\n    border-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%)) 1;\r\n    box-shadow: none;\r\n}\r\n\r\n.form-content button {\r\n    margin: auto;\r\n    background-color: hsl(278, 94%, 30%);\r\n    border: none;\r\n    transition: all 0.6s ease-in-out;\r\n}\r\n\r\n.form-content button:hover {\r\n    background-color: hsl(249, 99%, 64%) ;\r\n}\r\n\r\n.error-text {\r\n    color: red;\r\n    font-size: 0.8em;\r\n    padding-left: 0.2em;\r\n}\r\n\r\n@media (min-width: 576px) {\r\n    .card-content {\r\n        height: 15em;\r\n    }\r\n\r\n    .card-image {\r\n        height: 20em;\r\n        width: 20em;\r\n    }\r\n\r\n    .back-card {\r\n        margin-left: 5em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 15.8em;\r\n        padding-top: 4.6em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 20em;\r\n        margin-top: -13em;\r\n        gap: 2.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.15em;\r\n    }\r\n\r\n    .error-text {\r\n        color: red;\r\n        font-size: 1.2em;\r\n    }\r\n}\r\n\r\n@media (min-width: 768px) {\r\n    .card-content {\r\n        height: 15em;\r\n        margin-bottom: 0;\r\n    }\r\n\r\n    .card-image {\r\n        height: 20em;\r\n        width: 20em;\r\n    }\r\n\r\n    .back-card {\r\n        margin-left: 5em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 15.8em;\r\n        padding-top: 4.6em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 20em;\r\n        margin-top: -13em;\r\n        gap: 2.5em;\r\n    }\r\n\r\n    .form-content {\r\n        margin: 0;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.15em;\r\n    }\r\n\r\n    .form-content {\r\n        height: 75vh;\r\n    }\r\n\r\n    .error-text {\r\n        color: red;\r\n        font-size: 1.2em;\r\n    }\r\n} \r\n\r\n@media (min-width: 1200px) {\r\n    .card-content {\r\n        background: url('../imgs/bg-main-desktop.png');\r\n        background-size: cover;\r\n        height: 100svh;\r\n        padding-right: 0 !important;\r\n    }\r\n\r\n    .images  {\r\n        flex-direction: column-reverse;\r\n    }\r\n\r\n    .card-image {\r\n        height: 19em;\r\n    }\r\n\r\n    .back-card {\r\n        width: 30em;\r\n        margin: 0 0 0 25em;\r\n    }\r\n\r\n    .back-card span {\r\n        padding-left: 24.5em;\r\n        padding-top: 7.3em;\r\n    }\r\n\r\n    .front-card {\r\n        width: 30em;\r\n        margin: 0 0 0 20em;\r\n        gap: 4.5em;\r\n    }\r\n\r\n    .front-card span {\r\n        font-size: 1.6em;\r\n    }\r\n\r\n    .front-card .info {\r\n        font-size: 0.8em\r\n    }\r\n\r\n    .form-content {\r\n        height: 100vh;\r\n        padding-left: 15em;\r\n        padding-top: 0;\r\n    } \r\n}\r\n\r\n@media only screen and (orientation: landscape) and (max-height: 420px) {\r\n\r\n    .form-content {\r\n        height: 45em;\r\n    }\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
