@@ -67,12 +67,10 @@ body {
 }
 
 .form-content {
-    padding-top: 5em;
-    height: 65svh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
 }
 
 .form-content input::placeholder {
